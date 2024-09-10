@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Start coding
+          Pookie lebron
         </a>
       </header>
     </div>
