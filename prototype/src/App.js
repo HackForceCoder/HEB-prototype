@@ -3,16 +3,21 @@
 
 // Basics
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // Navigation
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Navigate
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
 } from 'react-router-dom';
 
 // Components
+import MenuNav from './components/navMenu';
+
+
+// Websites
 import home from './components/home';       // ---- Pagina de inicio
 import login from './components/login';     // ---- Iniciar sesión (cuenta existente)
 import shop from './components/shop';       // ---- Comprar (para el cliente)
@@ -20,27 +25,28 @@ import shop from './components/shop';       // ---- Comprar (para el cliente)
 
 // -------------------- App --------------------
 
-function App(){
-    return (
-        <div className="App">
-          <Router>
-            <AntDesign.MenuNav/>
-            <div className="App-content" style={{ paddingTop: '64px' }}>
-              <Routes>
-                <Route path="/" element={<home />} />
-                <Route path="/login" element={<login/>} />
-                <Route path="/shop/:id" element={<shop />} />
-                <Route path="/shop/" element={<Navigate to="/login" />} />
-              </Routes>
-            </div>
-          </Router>
+function App() {
+  return (
+    <div className="App">
+      <Helmet>
+        <title>HEB Titulo</title>
+      </Helmet>
+      <Router>
+        <MenuNav />
+        <div className="App-content" style={{ paddingTop: '64px' }}>
+          <Routes>
+            <Route path="/" element={<home />} />
+            <Route path="/login" element={<login />} />
+            <Route path="/shop/:id" element={<shop />} />
+            <Route path="/shop/" element={<Navigate to="/login" />} />
+          </Routes>
         </div>
-    );
+      </Router>
+    </div>
+  );
 }
 
 export default App;
-
-
 
 
 
