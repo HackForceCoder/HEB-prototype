@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/HEB_red_logo.png';
+import logo from '../images/red_white_logo.png';
 
 const home = () => {
   return (

@@ -1,32 +1,41 @@
 // ------------------------ Imports ------------------------
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import logo from "../images/HEB_red_logo.png";
-import { Button, Form, Input, Menu, message } from 'antd';
-import { LockOutlined, UserOutlined, HomeOutlined, UserAddOutlined, LoginOutlined, MessageOutlined } from '@ant-design/icons';
+// Basics
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+// Images
+import logo from "../images/red_white_logo.png";
+
+// Ant Design
+import { Menu } from 'antd';
+import { HomeOutlined, UserAddOutlined, LoginOutlined } from '@ant-design/icons';
 
 
 
 // ------------------------ Menu (Navigation Bar) ------------------------
 function MenuNav() {
     const items = [
-        { label: 'Pagina de inicio', key: 'pagina-inicio', icon: <HomeOutlined />, link: '/', },
-        { label: 'Iniciar sesión', key: 'inicio-sesion', icon: <LoginOutlined />, link: '/inicio-sesion', },
-        { label: 'Registrarse', key: 'registro', icon: <UserAddOutlined />, link: '/registro', },
-        { label: 'Chat', key: 'chat', icon: <MessageOutlined />, link: '/chat', },
+        { label: 'Pagina de inicio', key: 'home', icon: <HomeOutlined />, link: '/', },
+        { label: 'Iniciar sesión', key: 'login', icon: <LoginOutlined />, link: '/inicio-sesion', },
+        { label: 'Registrarse', key: 'shop', icon: <UserAddOutlined />, link: '/registro', },
     ];
 
     return (
-        <Menu mode="horizontal" style={{ position: 'fixed', top: 0, width: '100%', backgroundColor: '#fff', zIndex: 1000 }}>
-            <Menu.Item key="logo" style={{ paddingRight: '10px', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '0px' }}>
-                <img src={logo} alt="HEB red Logo" height={70} width={120} style={{ paddingBottom: '0px' }} />
-            </Menu.Item>
-            {items.map((item) => (
-                <Menu.Item key={item.key} icon={item.icon} style={{ paddingLeft: '80px', paddingBottom: '0px', color: 'black', fontSize: 18 }}>
-                    <Link to={item.link}>{item.label}</Link>
-                </Menu.Item>
-            ))}
-        </Menu>
+        <div style={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff', position: 'fixed',
+            top: 0, width: '100%', zIndex: 1000, padding: '10px 0'
+        }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={logo} alt="HEB red Logo" height={70} width={120} style={{ marginRight: '20px' }} />
+            </div>
+            <Menu mode="horizontal" style={{ flex: 1, display: 'flex', justifyContent: 'center', backgroundColor: '#fff', borderBottom: 'none' }}>
+                {items.map((item) => (
+                    <Menu.Item key={item.key} icon={item.icon} style={{ padding: '0 20px', fontSize: 18 }}>
+                        <Link to={item.link}>{item.label}</Link>
+                    </Menu.Item>
+                ))}
+            </Menu>
+        </div>
     );
 };
 
