@@ -18,10 +18,10 @@ import MenuNav from './components/menuNav';
 // import InicioSesion from './components/formInicioSesion';
 
 // Sitios web
-import Inicio from './components/inicio';             // ---- Pagina de inicio
+import Inicio from './components/inicio';                   // ---- Pagina de inicio
 import IniciarSesion from './components/iniciar_sesion';    // ---- Iniciar sesión (cuenta existente)
-import Contacto from './components/contacto';        // ---- Pagina para contactar (redes sociales)
-import Compra from './components/compra';             // ---- Comprar (para el cliente)
+import Contacto from './components/contacto';               // ---- Pagina para contactar (redes sociales)
+import Comprar from './components/comprar';                  // ---- Comprar (para el cliente)
 
 
 // -------------------- App --------------------
@@ -37,10 +37,11 @@ function App() {
         <div className="App-content" style={{ paddingTop: '64px' }}>
           <Routes>
             <Route path="/" element={<Inicio />} />
-            <Route path="/IniciarSesion" element={<IniciarSesion />} />
-            <Route path="/Contacto" element={<Contacto />} />
-            <Route path="/Compra/:id" element={<Compra />} />
-            <Route path="/Compra/" element={<Navigate to="/IniciarSesion" />} />
+            <Route path="/inicio-sesion" element={<IniciarSesion />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/productos" element={<Comprar />} />
+            <Route path="/productos/:nombre" element={<Comprar />} />
+            <Route path="/carrito/" element={<Navigate to="/inicio-sesion" />} />
           </Routes>
         </div>
       </Router>
