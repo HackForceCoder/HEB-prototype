@@ -15,7 +15,7 @@ import {
 
 // Componentes
 import MenuNav from './components/menuNav';
-import InicioSesion from './components/formInicioSesion';
+// import InicioSesion from './components/formInicioSesion';
 
 // Sitios web
 import home from './components/inicio';             // ---- Pagina de inicio
