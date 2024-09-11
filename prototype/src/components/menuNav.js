@@ -16,8 +16,8 @@ import { HomeOutlined, UserAddOutlined, LoginOutlined } from '@ant-design/icons'
 function MenuNav() {
     const items = [
         { label: 'Pagina de inicio', key: 'home', icon: <HomeOutlined />, link: '/', },
-        { label: 'Iniciar sesión', key: 'login', icon: <LoginOutlined />, link: '/inicio-sesion', },
-        { label: 'Registrarse', key: 'shop', icon: <UserAddOutlined />, link: '/registro', },
+        { label: 'Iniciar sesión', key: 'login', icon: <LoginOutlined />, link: '/login', },
+        { label: 'Contacto', key: 'contact', icon: <UserAddOutlined />, link: '/contact', },
     ];
 
     return (

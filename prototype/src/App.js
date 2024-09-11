@@ -1,11 +1,11 @@
 
 // -------------------- Imports --------------------
 
-// Basics
+// Basico
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-// Navigation
+// Navegacion
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,14 +13,15 @@ import {
   Navigate
 } from 'react-router-dom';
 
-// Components
-import MenuNav from './components/navMenu';
+// Componentes
+import MenuNav from './components/menuNav';
+import InicioSesion from './components/formInicioSesion';
 
-
-// Websites
-import home from './components/home';       // ---- Pagina de inicio
-import login from './components/login';     // ---- Iniciar sesión (cuenta existente)
-import shop from './components/shop';       // ---- Comprar (para el cliente)
+// Sitios web
+import home from './components/inicio';             // ---- Pagina de inicio
+import login from './components/iniciar_sesion';    // ---- Iniciar sesión (cuenta existente)
+import contact from './components/contacto';        // ---- Pagina para contactar (redes sociales)
+import shop from './components/compra';             // ---- Comprar (para el cliente)
 
 
 // -------------------- App --------------------
@@ -47,36 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-/* Original React webpage
-
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Pookie lebron 2.0
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
