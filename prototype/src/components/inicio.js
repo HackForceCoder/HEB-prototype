@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../images/red_white_logo.png';
 
-const home = () => {
+const Inicio = () => {
   return (
     <div className="App-content">
         <img src={logo} alt='logo' width='40%'></img>
@@ -9,4 +9,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Inicio;
