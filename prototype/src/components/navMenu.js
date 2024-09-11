@@ -19,7 +19,7 @@ function MenuNav() {
     return (
         <Menu mode="horizontal" style={{ position: 'fixed', top: 0, width: '100%', backgroundColor: '#fff', zIndex: 1000 }}>
             <Menu.Item key="logo" style={{ paddingRight: '10px', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '0px' }}>
-                <img src={logo} alt="Black Logo" height={50} width={300} style={{ paddingBottom: '0px' }} />
+                <img src={logo} alt="HEB red Logo" height={70} width={120} style={{ paddingBottom: '0px' }} />
             </Menu.Item>
             {items.map((item) => (
                 <Menu.Item key={item.key} icon={item.icon} style={{ paddingLeft: '80px', paddingBottom: '0px', color: 'black', fontSize: 18 }}>
