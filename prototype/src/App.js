@@ -21,7 +21,7 @@ import MenuNav from './components/menuNav';
 import Inicio from './components/inicio';                   // ---- Pagina de inicio
 import IniciarSesion from './components/iniciar_sesion';    // ---- Iniciar sesión (cuenta existente)
 import Contacto from './components/contacto';               // ---- Pagina para contactar (redes sociales)
-import Comprar from './components/comprar';                  // ---- Comprar (para el cliente)
+import Comprar from './components/comprar';                 // ---- Comprar (para el cliente)
 
 
 // -------------------- App --------------------
