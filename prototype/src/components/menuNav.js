@@ -19,11 +19,12 @@ function MenuNav() {
 
     const items = [
         { type: 'Logo', },
-        { label: 'Página de inicio', key: 'inicio', icon: <HomeOutlined />, link: '/', },
         { type: 'Busqueda', },   // Item para búsqueda de productos
-        { label: 'Iniciar sesión', key: 'iniciar_sesion', icon: <LoginOutlined />, link: '/IniciarSesion', },
-        { label: 'Contacto', key: 'contacto', icon: <UserAddOutlined />, link: '/Contacto', },
-        {},
+        { label: 'Página de inicio', key: 'inicio', icon: <HomeOutlined />, link: '/', },
+        { label: 'Productos', key: 'productos', icon: <UserAddOutlined />, link: '/productos', },
+        { label: 'Iniciar sesión', key: 'iniciar_sesion', icon: <LoginOutlined />, link: '/inicio-sesion', },
+        { label: 'Carrito', key: 'carrito', icon: <UserAddOutlined />, link: '/carrito', },
+        { label: 'Contacto', key: 'contacto', icon: <UserAddOutlined />, link: '/contacto', },
     ];
 
     // Accion de busqueda

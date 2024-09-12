@@ -1,9 +1,11 @@
-
 // -------------------- Imports --------------------
 
 // Basico
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
+// Favicon
+import Favicon from './images/heb_favicon.ico';
 
 // Navegacion
 import {
@@ -22,6 +24,7 @@ import Inicio from './components/inicio';                   // ---- Pagina de in
 import IniciarSesion from './components/iniciar_sesion';    // ---- Iniciar sesión (cuenta existente)
 import Contacto from './components/contacto';               // ---- Pagina para contactar (redes sociales)
 import Comprar from './components/comprar';                 // ---- Comprar (para el cliente)
+import Productos from './components/productos';             // ---- Productos (mostrar mas comprados / recientes)
 
 
 // -------------------- App --------------------
@@ -31,6 +34,7 @@ function App() {
     <div className="App">
       <Helmet>
         <title>HEB Titulo APP</title>
+        <link rel="icon" href={Favicon} />
       </Helmet>
       <Router>
         <MenuNav />
